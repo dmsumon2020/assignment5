@@ -1,0 +1,17 @@
+#donation.bg-primaryColor,
+#history.bg-primaryColor{
+    background-color: transparent;
+    min-height: 4rem;
+}
+#donation.bg-primaryColor.active,
+#history.bg-primaryColor.active{
+    background-color: #B4F461;
+}
+#header.scrolled-header {
+    backdrop-filter: blur(10px);
+    background-color: rgba(249, 247, 243, 0.7); 
+    transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
+}
+.scrolled-header #toggle-btns{
+    background: transparent;
+}

@@ -23,3 +23,14 @@ function toggleSections(showSectionId, hideSectionId) {
     showSection.classList.remove('hidden');
     hideSection.classList.add('hidden');
 }
+
+function toggleButtons(activeButtonId, inactiveButtonId) {
+    const activeButton = document.getElementById(activeButtonId);
+    const inactiveButton = document.getElementById(inactiveButtonId);
+    
+    activeButton.classList.add('active');
+    activeButton.classList.remove('inactive');
+    
+    inactiveButton.classList.add('inactive');
+    inactiveButton.classList.remove('active');
+}

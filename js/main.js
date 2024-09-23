@@ -39,8 +39,10 @@ donationForms.forEach((form) => {
 
 document.getElementById('donation').addEventListener('click', function(){
     toggleSections('blog-post', 'transactions');
+    toggleButtons('donation', 'history');
 });
 
 document.getElementById('history').addEventListener('click', function(){
     toggleSections('transactions', 'blog-post');
+    toggleButtons('history', 'donation');
 });
