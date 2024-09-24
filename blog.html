@@ -118,7 +118,27 @@
                 <div class="collapse-title text-2xl font-bold">What is event delegation in the context of the DOM, and why is it useful?</div>
                 <div class="collapse-content">
                     <p class="text-[#111111] text-opacity-60">
-                        DOM elements can be manipulated by accessing their properties and using methods like <code>element.innerHTML</code>, <code>element.style</code>, or by appending, removing, or updating nodes in the DOM tree.
+                        <strong>Event Delegation</strong> in the context of the DOM is a technique where you attach an event listener to a parent element instead of directly to each individual child element. This allows you to handle events for multiple child elements efficiently without having to add separate event listeners to each one.
+                    </p>
+                    <h4 class="font-bold mt-5">Why is it useful?</h4>
+
+                    <h3 class="font-bold mt-5">1. Improved Performance:</h3>
+                    <p class="pl-5">
+                        When you have many child elements, attaching event listeners directly to each one can lead to performance issues, especially in large-scale applications. Event delegation reduces the number of event listeners, improving performance.
+                    </p>
+                    <h3 class="font-bold mt-5">2. Dynamic Content:</h3>
+                    <p class="pl-5">
+                        If the DOM is dynamic and elements are added or removed at runtime, event delegation can handle events for these new elements without requiring additional event listeners.
+                    </p>
+
+                    <h3 class="font-bold mt-5">3. Code Organization:</h3>
+                    <p class="pl-5">
+                        It can simplify your code by centralizing event handling in one place, making it easier to manage and maintain.
+                    </p>
+
+                    <h3 class="font-bold mt-5">4. Reduced Memory Usage:</h3>
+                    <p class="pl-5">
+                        Fewer event listeners mean less memory usage, especially for complex applications.
                     </p>
                 </div>
             </div>
