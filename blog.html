@@ -26,18 +26,28 @@
         }        
     </style>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        headingColor: 'rgb(17, 17, 17)',
-                        primaryColor: 'rgb(180, 244, 97)',
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    headingColor: 'rgb(17, 17, 17)',
+                    primaryColor: 'rgb(180, 244, 97)',
+                },
+                animation: {
+                    'shake': 'shake 0.5s ease-in-out infinite',
+                },
+                keyframes: {
+                    shake: {
+                        '0%, 100%': { transform: 'translateX(0)' },
+                        '25%': { transform: 'translateX(-5px)' },
+                        '75%': { transform: 'translateX(5px)' },
                     },
                 },
             },
-        }        
-    </script>
+        },
+    }
+</script>
 
 </head>
 <body class="lexend-font">
@@ -61,7 +71,10 @@
     <main class="w-11/12 lg:w-8/12 mx-auto">
         <!-- Main Blog Section Starts -->
         <section id="blog-post" class="mt-20 space-y-7">
-            <h2 class="text-4xl font-bold">Important FAQs</h2>
+            <h2 class="text-4xl font-bold inline-flex items-center">
+                Important FAQs 
+                <img src="./assets/question_mark.png" alt="" class="ml-2 w-16 h-16 animate-shake">
+            </h2>
 
             <!-- Accordion Starts -->
             <!-- First Accordion -->
@@ -192,7 +205,7 @@
 
     <!-- Footer Section -->
     <footer class="py-10 md:py-20 mt-10 md:mt-36 bg-[#F9F7F3]">
-        <!-- Add Footer Content Here -->
+        
     </footer>
 
     <script src="./js/redirect.js"></script>
