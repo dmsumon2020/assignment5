@@ -9,10 +9,10 @@ donationForms.forEach((form) => {
         const inputField = form.querySelector('input');
         const donationAmount = parseFloat(inputField.value); 
 
-        if (isNaN(donationAmount) || donationAmount <= 0) {
+        if (inputField.value.trim() === '' || isNaN(donationAmount) || donationAmount <= 0) {
             alert('Please enter a valid positive number for the donation.');
             return;
-        }
+        }        
 
         if (donationAmount > mainBalanceNumber) {
             alert('You do not have enough balance to make this donation.');
