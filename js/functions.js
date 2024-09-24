@@ -11,10 +11,11 @@ function showModalBox() {
 
 function addTransactions(donationAmount, blogHeading, timestamp) {
     const myDiv = document.createElement('div');
-    myDiv.classList.add('space-y-4', 'md:space-y-0', 'md:space-x-4', 'border', 'border-[1px]', 'border-[#11111133]', 'p-6', 'rounded-2xl');
-    myDiv.innerText = `${donationAmount} Taka is donated for ${blogHeading} \n ${timestamp}`;
+    myDiv.className = 'space-y-4 md:space-y-0 md:space-x-4 border border-[1px] border-[#11111133] p-6 rounded-2xl';
+    myDiv.innerHTML = `<h3 class="text-xl mb-5 font-bold">${donationAmount} Taka is donated for ${blogHeading}</h3> <p class="text-headingColor opacity-50 font-light">Date : ${timestamp}</p>`;
     document.getElementById('transactions-container').appendChild(myDiv);
 }
+
 
 function toggleSections(showSectionId, hideSectionId) {
     const showSection = document.getElementById(showSectionId);

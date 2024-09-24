@@ -6,3 +6,9 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled-header');
     }
 });
+
+// redirect to the blog.html
+const logoBtn = document.getElementById('logo');
+logoBtn.addEventListener('click', function(){
+    window.location.href = './blog.html';
+});

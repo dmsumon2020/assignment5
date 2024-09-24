@@ -39,12 +39,12 @@
 
     <header id="header" class="sticky top-0 z-10 bg-[#F9F7F3]">
         <nav class="container mx-auto p-4 pb-12 flex justify-between items-center">
-            <div class="text-xl font-bold">Blog</div>
+            <button id="logo" type="button" class="active btn bg-primaryColor text-xl font-semibold px-10">Blog</button>
             <div class="flex flex-row items-center gap-4">
                     <img src="./assets/logo.png" alt="">
                     <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
             </div>
-            <div class="flex flex-row items-center gap-2">
+            <div class="flex flex-row items-center gap-2 font-bold">
                 <img src="./assets/coin.png" alt="">
                 <span id="main-balance">1800</span> BDT
             </div>
@@ -123,8 +123,8 @@
         </section>
             <!-- main blog section ends -->
         <section id="transactions" class="hidden">
-            <h2 class="text-center text-4xl font-bold">Transactions</h2>
-            <div id="transactions-container">
+            <h2 class="text-center text-4xl font-bold mb-6">Transactions</h2>
+            <div id="transactions-container" class="space-y-8">
             </div>
         </section>     
     </main>
