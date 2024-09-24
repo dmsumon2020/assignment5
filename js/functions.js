@@ -16,7 +16,6 @@ function addTransactions(donationAmount, blogHeading, timestamp) {
     document.getElementById('transactions-container').appendChild(myDiv);
 }
 
-
 function toggleSections(showSectionId, hideSectionId) {
     const showSection = document.getElementById(showSectionId);
     const hideSection = document.getElementById(hideSectionId);
