@@ -1,7 +1,6 @@
 #donation.bg-primaryColor,
 #history.bg-primaryColor{
     background-color: transparent;
-    min-height: 4rem;
 }
 #donation.bg-primaryColor.active,
 #history.bg-primaryColor.active{
@@ -14,4 +13,8 @@
 }
 .scrolled-header #toggle-btns{
     background: transparent;
+}
+code{
+    background-color: #e9eef6;
+    padding: 1px 6px;
 }

@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet"> 
+
+    <!-- DaisyUI and Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./css/styles.css">
-    
+
     <style>
         .lexend-font {
             font-family: "Lexend", sans-serif;
@@ -37,127 +42,139 @@
 </head>
 <body class="lexend-font">
 
+    <!-- Header Section -->
     <header id="header" class="sticky top-0 z-10 bg-[#F9F7F3]">
-        <nav class="container mx-auto p-4 pb-12 flex justify-between items-center">
+        <nav class="container mx-auto p-4 pb-12 flex justify-between items-center flex-col md:flex-row gap-4 md:gap-0">
             <button id="blog-logo" type="button" class="active btn bg-primaryColor text-xl font-semibold px-10">Home</button>
             <div class="flex flex-row items-center gap-4">
-                    <img src="./assets/logo.png" alt="">
-                    <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
+                <img src="./assets/logo.png" alt="Donate Bangladesh Logo">
+                <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
             </div>
             <div class="flex flex-row items-center gap-2">
-                <img src="./assets/coin.png" alt="">
+                <img src="./assets/coin.png" alt="Coin Icon">
                 <span id="main-balance">1800</span> BDT
             </div>
         </nav>
     </header>
 
-    <main class="lg:w-8/12 mx-auto">
-            <!-- main blog section starts -->
+    <!-- Main Content Section -->
+    <main class="w-11/12 lg:w-8/12 mx-auto">
+        <!-- Main Blog Section Starts -->
         <section id="blog-post" class="mt-20 space-y-7">
             <h2 class="text-4xl font-bold">Important FAQs</h2>
 
-            <!-- accordion starts  -->
-            <div class="collapse collapse-arrow bg-base-200 text-xl">
+            <!-- Accordion Starts -->
+            <!-- First Accordion -->
+            <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
-                <div class="collapse-content py-5">
-                    <p>
+                <div class="collapse-title text-2xl font-bold">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p class="text-[#111111] text-opacity-60">
                         The Document Object Model (DOM) is like a tree that represents a web page. Each branch and leaf of the tree represents a part of the page. For example, a branch might be a &lt;div&gt; element, and a leaf might be the text inside that &lt;div&gt;. DOM turns the webpage's HTML structure into something like a family tree, where every part of the page (like text, images, and buttons) is treated as an object that can be changed or interacted using JavaScript.
-                    </p>
+                    </p> 
                 </div>
             </div>
 
-            <div class="collapse collapse-arrow bg-base-200 text-xl">
+            <!-- Second Accordion -->
+            <div class="collapse collapse-arrow bg-base-200 overflow-x">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-                <div class="collapse-content py-5">
-                    <p class="my-4">
-                        In JavaScript, we can select elements from the Document Object Model (DOM) using various methods. <br>
-                        <ul class="space-y-7">
-                            <li class="space-y-5">
-                                1. getElementById <br>
-                                <p class="bg-orange-400 ml-[35px] px-4 inline-block">
-                                    Method: document.getElementById(id)
-                                </p> <br>
-                                <p class="bg-teal-200 -400 ml-[35px] px-4 inline-block">
-                                    This method selects an element by its id attribute.
-                                </p>
-                            </li>
-                            <li class="space-y-5">
-                                2. getElementsByClassName<br>
-                                <p class="bg-orange-400 ml-[35px] px-4 inline-block">
-                                    Method: document.getElementsByClassName(className)
-                                </p> <br>
-                                <p class="bg-teal-200 -400 ml-[35px] px-4 inline-block">
-                                    This method selects all elements with a specific class name.
-                                </p>
-                            </li>
-                            <li class="space-y-5">
-                                3. getElementsByTagName <br>
-                                <p class="bg-orange-400 ml-[35px] px-4 inline-block">
-                                    Method: document.getElementsByTagName(tagName) 
-                                </p><br>
-                                <p class="bg-teal-200 -400 ml-[35px] px-4 inline-block">
-                                    This method selects all elements with a specific tag name, such as &lt;p&gt;, &lt;div&gt;, or &lt;a&gt;, and returns an HTMLCollection.
-                                </p>
-                            </li>
-                            <li class="space-y-5">
-                                4. querySelector <br>
-                                <p class="bg-orange-400 ml-[35px] px-4 inline-block">
-                                    Methods: document.querySelector(selector) 
-                                </p><br>
-                                <p class="bg-teal-200 -400 ml-[35px] px-4 inline-block">
-                                    This method selects the first element that matches a CSS selector. It's very flexible and can target elements by tag, class, id, or any valid CSS selector.
-                                </p>
-                            </li>
-                            <li class="space-y-5">
-                                5. querySelectorAll <br>
-                                <p class="bg-orange-400 ml-[35px] px-4 inline-block">
-                                    Methods: document.querySelectorAll(selector) 
-
-                                </p><br>
-                                <p class="bg-teal-200 -400 ml-[35px] px-4 inline-block">
-                                    This method selects all elements that match a CSS or  tag selector and returns a NodeList.
-                                </p>
-                            </li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-
-            <div class="collapse collapse-arrow bg-base-200 text-xl">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-title text-2xl font-bold">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                    <p class="space-y-5">
-                        <b>Event delegation</b> is a technique in JavaScript where you attach an event listener to a parent element instead of directly to each child element. When an event occurs on any of the child elements, it bubbles up to the parent, triggering the event listener.
-                        <h2 class="text-2xl font-bold mt-[20px]">How Event Delegation Works</h2>
-                        <p class="mt-[15px]">
-                            1. Event Bubbling: When an event occurs on an element (like a click), it "bubbles" up the DOM tree, meaning it goes from the target element to its parent elements. Event delegation takes advantage of this bubbling phase.
-                        </p>
-                        <p class="mt-[15px]">
-                            2. Single Listener: Instead of attaching multiple listeners to each child element, you attach one listener to a parent element. This parent listens for events that occur on its child elements.
-                        </p>
+                    <p class="text-[#111111] text-opacity-60 mb-4">
+                        In JavaScript, we can select elements from the Document Object Model (DOM) using various methods.
+                    </p>                            
+                    <p class="text-[#111111]  pt-4">
+                        <strong class="text-red-900">1. getElementById</strong><br>
+                        Method: <code>document.getElementById(id)</code><br>
+                        This method selects an element by its id attribute.<br>
+
+                        <hr class="border-t-2 border-gray-400 my-4">
+
+                        <strong class="text-red-900">2. getElementsByClassName</strong><br>
+                        Method: <code>document.getElementsByClassName(className)</code><br>
+                        This method selects all elements with a specific class name.<br>
+                        <hr class="border-t-2 border-gray-400 my-4">
+
+                        <strong class="text-red-900">3. getElementsByTagName </strong><br>
+                        Method: <code>document.getElementsByTagName(tagName)</code><br>
+                        This method selects all elements with a specific tag name, such as &lt;p&gt;, &lt;div&gt;, or &lt;a&gt;, and returns an HTMLCollection. <br>
+                        <hr class="border-t-2 border-gray-400 my-4">
+
+                        <strong class="text-red-900">4. querySelector</strong> <br>
+                        Method: <code>document.querySelector(selector)</code> <br>
+                        This method selects the first element that matches a CSS selector. It's very flexible and can target elements by tag, class, id, or any valid CSS selector. <br>
+                        <hr class="border-t-2 border-gray-400 my-4">
+
+                        <strong class="text-red-900">5. querySelectorAll</strong> <br>
+                        Method: <code>document.querySelectorAll(selector)</code><br>
+                        This method selects all elements that match a CSS or tag selector and returns a NodeList. <br>
+                    </p>  
+                </div>
+            </div>
+
+            <!-- Third Accordion -->
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-2xl font-bold">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                    <p class="text-[#111111] text-opacity-60">
+                        DOM elements can be manipulated by accessing their properties and using methods like <code>element.innerHTML</code>, <code>element.style</code>, or by appending, removing, or updating nodes in the DOM tree.
                     </p>
                 </div>
             </div>
 
-            <div class="collapse collapse-arrow bg-base-200 text-xl">
+            <!-- Fourth Accordion -->
+            <div class="collapse collapse-arrow bg-base-200 overflow-auto">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-title text-2xl font-bold">How do you manipulate an element's attributes and styles using the DOM?</div>
                 <div class="collapse-content">
-                    <p>This is the new 4th accordion content</p>
+                    <p class="text-[#111111] text-opacity-60">
+                        <h1 class="font-bold mb-4">Manipulating Attributes:</h1>
+                        <strong class="pl-3">1. Getting Attributes:</strong>
+                    </p>
+                    <p class="pl-3">Use the <code>getAttribute()</code> method to retrieve the value of a specific attribute.</p>
+                    <p class="pl-3">Example: <code>element.getAttribute("href")</code> will get the <code>href</code> attribute of the element.</p>
+                    <hr class="border-t-2 border-gray-400 my-4">
+                    
+                    <p class="pl-3"><strong>2. Setting Attributes:</strong></p>
+                    <p class="pl-3">Use the <code>setAttribute()</code> method to set the value of a specific attribute.</p>
+                    <p class="pl-3">Example: <code>element.setAttribute("href", "https://example.com")</code> will set the <code>href</code> attribute of the element.</p>
+                    <hr class="border-t-2 border-gray-400 my-4">
+
+                    <p class="pl-3"><strong>3. Removing Attributes:</strong></p>
+                    <p class="pl-3">Use the <code>removeAttribute()</code> method to remove an attribute.</p>
+                    <p class="pl-3">Example: <code>element.removeAttribute("href")</code> will remove the <code>href</code> attribute from the element.</p>
+                    <hr class="border-t-2 border-gray-400 my-4">
+
+                    <p class="text-[#111111] text-opacity-60">
+                        <h1 class="font-bold mb-4">Manipulating Styles:</h1>
+                        <strong class="pl-3">1. Getting Styles:</strong>
+                    </p>
+                    <p class="pl-3">Use the <code>style</code> property to access the element's inline styles.</p>
+                    <p class="pl-3">Example: <code>element.style.color</code> will get the color property of the element.</p>
+                    <p class="pl-3">Use the <code>getComputedStyle()</code> method to get the computed style, including inherited styles and CSS rules.</p>
+                    <p class="pl-3">Example: <code>window.getComputedStyle(element).backgroundColor</code> will get the computed background color.</p>
+
+                    <hr class="border-t-2 border-gray-400 my-4">
+                    <p class="text-[#111111] text-opacity-60"></p>
+                        <strong class="pl-3">2. Setting Styles:</strong>
+                    </p>
+
+                    <p class="pl-3">Set the properties of the style object directly.</p>
+                    <p class="pl-3">Example: <code>element.style.backgroundColor = "red"</code> will set the background color to red.</p>
+                    <p class="pl-3">Use the <code>setProperty()</code> method to set a style property with a vendor prefix if necessary.</p>
+                    <p class="pl-3">Example: <code>element.style.setProperty("-webkit-transform", "rotate(45deg)")</code> will set the Webkit transform.</p>
                 </div>
             </div>
-            <!-- accordion ends -->
- 
+            <!-- Accordion Ends -->
         </section>
-  
     </main>
 
-    <footer>
-  
+    <!-- Footer Section -->
+    <footer class="py-10 md:py-20 mt-10 md:mt-36 bg-[#F9F7F3]">
+        <!-- Add Footer Content Here -->
     </footer>
+
     <script src="./js/redirect.js"></script>
 </body>
 </html>
